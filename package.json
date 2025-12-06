@@ -1,0 +1,15 @@
+{
+  "name": "book-cart-js",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "server": "npm run dev --workspace=apps/server",
+    "demo": "npm start --workspace=apps/demo",
+    "dev": "concurrently \"npm run server\" \"npm run demo\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
